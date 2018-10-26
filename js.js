@@ -5,7 +5,7 @@ app.controller("myCtrl", function($scope, $http) {
 // Ligne qui sert à aller chercher le code json
     $http.get("voiture.json")
 // Si on récupère le json on le stock dans la variable cars
-    .then(function(response) {
+    .then(function(response, $filter) {
 // la variable $scope nommé cars affiche les données de la réponse
         $scope.cars = response.data;
     });
